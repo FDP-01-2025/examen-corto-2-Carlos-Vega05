@@ -6,7 +6,7 @@ int main() {
     int edad;
     float saldo = 1000;
 
-    // Paso 1: Verificar la edad
+    // Verificar la edad
     cout << "Ingrese su edad: ";
     cin >> edad;
 
@@ -20,7 +20,7 @@ int main() {
         return 0;
     }
 
-    // Paso 2: Seleccionar tipo de usuario
+    // Seleccionar tipo de usuario
     int opcion;
     cout << "Seleccione su tipo de usuario:";
     cout << "1. Estudiante";
@@ -38,7 +38,6 @@ int main() {
     float precios[6];
     int cantidad = 0;
 
-    // Paso 3: Llenar dispositivos según la opción
     if (opcion == 1 || opcion == 3) {
         nombres[cantidad] = "Laptop Basica";
         precios[cantidad++] = 900;
@@ -61,13 +60,11 @@ int main() {
         precios[cantidad++] = 2000;
     }
 
-    // Paso 4: Mostrar dispositivos con números
     cout << "Dispositivos disponibles:";
     for (int i = 0; i < cantidad; i++) {
         cout << (i + 1) << ") " << nombres[i] << " - $" << precios[i] << endl;
     }
 
-    // Paso 5: Elegir dispositivo por número
     int seleccion;
     cout << "\nSeleccione una opcion (1-" << cantidad << "): ";
     cin >> seleccion;
@@ -76,8 +73,7 @@ int main() {
         cout << "Opción no válida." << endl;
         return 0;
     }
-
-    // Paso 6: Verificar saldo y procesar compra
+    
     if (precios[indice] > saldo) {
         cout << "No tiene suficiente dinero. Le faltan $" << precios[indice] - saldo << " para comprar este dispositivo." << endl;
     } else {
